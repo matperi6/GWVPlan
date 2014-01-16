@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E6E6E6"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" 
+        android:weightSum="3"
+        >
+
+			    <requestFocus />
+        
+        
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content"  android:layout_marginTop="5dp">
+
+		    <Button
+		        android:id="@+id/buttonSync"
+		        style="?android:attr/buttonStyleSmall"
+		        android:layout_width="match_parent"
+		        android:layout_height="38dp"
+		        android:layout_weight="1"
+		        android:drawableLeft="@drawable/b_green"
+		        android:gravity="right|center_vertical"
+		        android:text="@string/str_abgleich" />
+
+		    <Button
+		        android:id="@+id/buttonSettings"
+		        style="?android:attr/buttonStyleSmall"
+		        android:layout_width="match_parent"
+		        android:layout_height="38dp"
+		        android:layout_weight="1"
+		        android:drawableLeft="@drawable/b_orange"
+		        android:gravity="right|center_vertical"
+		        android:text="@string/str_auswahl" />
+
+		    <Button
+		        android:id="@+id/buttonShowall"
+		        style="?android:attr/buttonStyleSmall"
+		        android:layout_width="match_parent"
+		        android:layout_height="38dp"
+		        android:layout_weight="1"
+		        android:drawableLeft="@drawable/b_red"
+		        android:gravity="right|center_vertical"
+		        android:text="@string/str_komplett" />
+
+	    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#006633" >
+
+                <TextView
+                    android:id="@+id/tv_tag"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="left"
+                    android:text="Europaschule Gymnasium Westerstede"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="normal|bold" />
+            </RelativeLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp" >
+
+            <TextView
+                android:id="@+id/tv_auswahl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/str_auswahl_table"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="vertical" >
+		        		        		        
+		    <LinearLayout
+		        android:id="@+id/ll_table"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_margin="1dp" >
+
+		        <ScrollView android:id="@+id/sv_table"
+		            android:layout_width="fill_parent" android:layout_height="fill_parent"
+		            android:fillViewport="true">
+
+		            <LinearLayout
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content" >
+
+		                <TableLayout
+		                    android:id="@+id/tl_vertretung"
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="fill_parent"
+		                    android:layout_margin="3dp"
+		                    android:stretchColumns="0,1" >
+
+		                </TableLayout>
+		            </LinearLayout>
+		        </ScrollView>
+		    </LinearLayout>    	
+		</LinearLayout>
+	    
+	</LinearLayout>
+</RelativeLayout>

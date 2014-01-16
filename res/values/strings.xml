@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GWVPlan</string>
+    <string name="title">GWVPlan</string>
+    <string name="menu_info">Info</string>
+    <string name="title_activity_main">GWVPlan</string>
+    <string name="str_abgleich">Abgleich</string>
+    <string name="str_auswahl">Auswahl</string>
+    <string name="str_komplett">Komplett</string>
+    <string name="str_auswahl_table">Auswahl: ?</string>
+</resources>
