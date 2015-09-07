@@ -97,7 +97,7 @@ public class GWVPlanActivity extends Activity {
 		
 		    // Setting Dialog Message
 		    alertDialogInfo.setMessage("Android-Vertretungsplan für\n" +
-		    		"das Gymnasium Westerstede\n\nAutor: M. Perenthaler\n\nBuild 1.05 (2013)");
+		    		"das Gymnasium Westerstede\n\nAutor: M. Perenthaler\n\nBuild 1.08 (2015)");
 		
 		    // Setting Icon to Dialog
 		    alertDialogInfo.setIcon(R.drawable.i_green);
@@ -319,7 +319,7 @@ public class GWVPlanActivity extends Activity {
 	
         if (vp.fach.equals("/")) vp.fach = "";
         if (!vp.fach.equals("") && !vp.vertreter.equals("") && !vp.lehrer.equals("")) {
-        	ZweiteZeileText = vp.fach + "    Vertretung: " + vp.vertreter + "    Abwesend: " + LehrerAbwesend;       	
+        	ZweiteZeileText = vp.fach + "    Vertretung: " + vp.vertreter + "    ursprünglich: " + LehrerAbwesend;       	
         }
         if (!vp.fach.equals("") && !vp.vertreter.equals("") && vp.lehrer.equals("")) {
         	ZweiteZeileText = vp.fach + "    Vertretung: " + vp.vertreter;
@@ -328,16 +328,16 @@ public class GWVPlanActivity extends Activity {
         	ZweiteZeileText = vp.fach;
       	}
         if (!vp.fach.equals("") && vp.vertreter.equals("") && !vp.lehrer.equals("")) {
-        	ZweiteZeileText = vp.fach + "    Abwesend: " + LehrerAbwesend;
+        	ZweiteZeileText = vp.fach + "    ursprünglich: " + LehrerAbwesend;
         }
         if (vp.fach.equals("") && !vp.vertreter.equals("") && !vp.lehrer.equals("")) {
-        	ZweiteZeileText = "Vertretung: " + vp.vertreter + "    Abwesend: " + LehrerAbwesend;
+        	ZweiteZeileText = "Vertretung: " + vp.vertreter + "    ursprünglich: " + LehrerAbwesend;
         } 
         if (vp.fach.equals("") && !vp.vertreter.equals("") && vp.lehrer.equals("")) {
         	ZweiteZeileText = "Vertretung: " + vp.vertreter;
         }
         if (vp.fach.equals("") && vp.vertreter.equals("") && !vp.lehrer.equals("")) {
-        	ZweiteZeileText = "Abwesend: " + LehrerAbwesend;
+        	ZweiteZeileText = "ursprünglich: " + LehrerAbwesend;
         }
     
        
@@ -461,9 +461,9 @@ public class GWVPlanActivity extends Activity {
 						+ "\n\n2. Ist der Vertretungsplan online?\n", R.color.textdarkgrey2, R.color.white);
 				errMsg = null;
 			}
-			else if (!GWVPlanUtil.expectedMondayTitle(kw).equals(data.weekdayTitle)) {
+/*			else if (!GWVPlanUtil.expectedMondayTitle(kw).equals(data.weekdayTitle)) {
 				fillMsgTable("Der Vertretungsplan für die KW"+kw+" ist nicht aktuell ("+data.weekdayTitle+" statt "+GWVPlanUtil.expectedMondayTitle(kw)+")", R.color.textdarkgrey2, R.color.white);
-			}
+			} */
 			else {
 				vpData.vpMsg = GWVPlanUtil.serialize(data);
 				vpData.writeConfig();
